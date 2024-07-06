@@ -3,6 +3,7 @@ export {};
 declare global {
   interface AISession {
     promptStreaming: (prompt: string) => AsyncIterableIterator<string>;
+    prompt: (prompt: string) => Promise<string>;
     destroy: () => void;
   }
   interface AI {
